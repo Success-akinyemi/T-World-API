@@ -122,7 +122,7 @@ Swagger UI is at `http://localhost:5000/api/docs` once the server is running. Ra
 |---|---|:---:|---|
 | POST | `/api/auth/register` | N | Create an account |
 | POST | `/api/auth/login` | N | Log in, get a JWT |
-| GET | `/api/items` | — | List items with pagination + filters |
+| GET | `/api/items` | N | List items with pagination + filters |
 | GET | `/api/items/:id` | N | Get a single item |
 | POST | `/api/items/:id/save` | Y | Save to your reading list |
 | DELETE | `/api/items/:id/save` | Y | Remove from your reading list |

@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { AuthService } from '../services/auth.service';
-import { sendSuccess, sendCreated } from '../utils/response';
+import { sendSuccess } from '../utils/response';
 
 export const AuthController = {
   /**
