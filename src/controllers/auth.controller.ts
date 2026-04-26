@@ -11,7 +11,7 @@ export const AuthController = {
     try {
       const { name, email, password } = req.body;
       const result = await AuthService.register({ name, email, password });
-      sendSuccess(res, result, 'Account created successfully');
+      sendSuccess(res, result, 'Account created successfully', 201);
     } catch (error) {
       next(error);
     }
