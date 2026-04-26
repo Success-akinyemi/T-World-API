@@ -79,7 +79,7 @@ tests/
 You'll need Node 20+, npm 9+, and a MongoDB Atlas cluster (free tier is fine).
 
 ```bash
-git clone https://github.com/your-username/tworld-api.git
+git clone https://github.com/Success-akinyemi/T-World-API.git
 cd tworld-api
 npm install
 ```
@@ -87,7 +87,7 @@ npm install
 Copy the example env file and fill in your values:
 
 ```bash
-cp .env.example .env
+cp .env.example .env .env.test
 ```
 
 | Variable | Description | Default |
@@ -118,16 +118,16 @@ Swagger UI is at `http://localhost:5000/api/docs` once the server is running. Ra
 
 ## Endpoints
 
-| Method | Endpoint | Auth | Description |
+| Method | Endpoint | Auth (Y/N) | Description |
 |---|---|:---:|---|
-| POST | `/api/auth/register` | — | Create an account |
-| POST | `/api/auth/login` | — | Log in, get a JWT |
+| POST | `/api/auth/register` | N | Create an account |
+| POST | `/api/auth/login` | N | Log in, get a JWT |
 | GET | `/api/items` | — | List items with pagination + filters |
-| GET | `/api/items/:id` | — | Get a single item |
-| POST | `/api/items/:id/save` | ✓ | Save to your reading list |
-| DELETE | `/api/items/:id/save` | ✓ | Remove from your reading list |
-| GET | `/api/me/saved` | ✓ | See everything you've saved |
-| GET | `/health` | — | Health check |
+| GET | `/api/items/:id` | N | Get a single item |
+| POST | `/api/items/:id/save` | Y | Save to your reading list |
+| DELETE | `/api/items/:id/save` | Y | Remove from your reading list |
+| GET | `/api/me/saved` | Y | See everything you've saved |
+| GET | `/health` | N | Health check |
 
 ### Filtering `GET /api/items`
 
@@ -147,7 +147,7 @@ Three collections:
 
 **users**
 ```
-_id, name, email (unique, indexed), password (bcrypt, never returned), createdAt, updatedAt
+_id, name, email (unique, indexed), password (encrypted), createdAt, updatedAt
 ```
 
 **items**
@@ -233,4 +233,4 @@ curl -s -X DELETE "$BASE/items/<ITEM_ID>/save" \
 
 ---
 
-MIT © Tongston
+MIT © Success
