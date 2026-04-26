@@ -24,7 +24,7 @@ const options: swaggerJsdoc.Options = {
         description: 'Local development server',
       },
       {
-        url: 'https://live-domain.com/api',
+        url: 'https://t-world-api.onrender.com/api',
         description: 'Production server',
       },
     ],
